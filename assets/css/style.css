@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
+    color: white;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.service-box {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
