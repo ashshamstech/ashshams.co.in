@@ -46,6 +46,11 @@ p{
     line-height: 1.8;
 }
 
+sub {
+    color: #ffffff;
+    font-size: 0.5em !important;
+}
+
 
 /*===============================
          1. Helper
@@ -261,6 +266,11 @@ p{
 
 .nav-sticky .logo {
     color: #000 !important;
+}
+
+.nav-sticky sub {
+    color: #000 !important;
+    font-size: 0.5em !important;
 }
 
 /*==============================
@@ -864,7 +874,7 @@ textarea.form-control {
 *************************/
 
 .footer{
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 40px;
     color: #818d9c;
 }
@@ -918,6 +928,11 @@ textarea.form-control {
 .dribbble {
     background-color: #fff;
     color: #000;
+}
+
+.instagram {
+    background-color: rgba(220,53,69,.9);
+    color: #ffffff;
 }
 
 .footer-menu li a {
