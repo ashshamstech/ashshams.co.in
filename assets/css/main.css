@@ -2126,6 +2126,7 @@ ol {
   line-height: 24px;
 }
 
+.single-service h3,
 .single-service h3 a {
   color: #000000;
   font-size: 17px;
@@ -2152,6 +2153,15 @@ ol {
   color: #888;
   line-height: 24px;
   margin-top: 25px;
+}
+
+.single-service p a {
+  color: #333;
+}
+
+.single-service p a:hover {
+  color: #000000;
+  text-decoration: underline;
 }
 
 /*======================================
