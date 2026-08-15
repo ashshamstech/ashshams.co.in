@@ -36,6 +36,30 @@ them to, so without a new URL a returning visitor keeps the old version and
 sees a half-styled page. Changing the number makes it a new URL and forces
 a fresh fetch.
 
+The site sits behind Cloudflare, which caches CSS and JS at its edge with
+`cache-control: public, max-age=604800` — seven days. That cache is shared
+by every visitor, so uploading a new file is not enough on its own: until
+the edge copy expires, Cloudflare keeps serving the old one and the page
+renders with new markup against old styles.
+
+Two things keep that from happening:
+
+1. The `?v=` string. A new value is a new cache key, so Cloudflare has
+   nothing stored for it and fetches from the origin.
+2. A cache purge after deploying, from the Cloudflare dashboard under
+   **Caching → Configuration → Purge Everything**. This is what clears the
+   unversioned URLs that visitors may still be holding.
+
+To check what the edge is serving versus what is actually on the server:
+
+```
+curl -sI https://ashshams.co.in/assets/css/main.css | grep -i cf-cache-status
+curl -s "https://ashshams.co.in/assets/css/main.css?cachebust=1" | grep -c form-main
+```
+
+A `cf-cache-status: HIT` on the first with different content from the
+second means the edge copy is stale.
+
 ## Contact form
 
 The form in `index.html` posts to `php/contact.php`, which validates the
