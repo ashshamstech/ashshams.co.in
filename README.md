@@ -21,6 +21,21 @@ Upload the whole directory to the web root. Everything except `php/` is
 static; `php/` needs PHP 7.4 or newer with the `mail()` function enabled,
 which is the default on essentially every shared host.
 
+### After changing CSS or JS
+
+`assets/css/main.css`, `assets/js/main.js` and `assets/js/contact-form.js`
+are linked with a `?v=` version string:
+
+```html
+<link rel="stylesheet" href="assets/css/main.css?v=20260815" />
+```
+
+Bump that value in `index.html` and `about-us.html` whenever you edit one
+of those files. Browsers cache stylesheets for as long as the server tells
+them to, so without a new URL a returning visitor keeps the old version and
+sees a half-styled page. Changing the number makes it a new URL and forces
+a fresh fetch.
+
 ## Contact form
 
 The form in `index.html` posts to `php/contact.php`, which validates the
