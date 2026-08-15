@@ -3211,18 +3211,6 @@ ol {
     margin-top: 30px;
   }
 
-  .contact-us .form-main {
-    padding: 0 !important;
-  }
-
-  .contact-us .form-main {
-    margin-right: 0 !important;
-  }
-
-  .contact-us .form-main {
-    margin-bottom: 40px;
-  }
-
   .team-details .content .name {
     font-size: 25px;
   }
@@ -3805,4 +3793,174 @@ ol {
 .free-version-banner .button .btn {
   background-color: #fff;
   color: #000000;
+}
+/*======================================
+    Contact Form
+========================================*/
+.contact-us .contact-details {
+  margin-bottom: 40px;
+}
+
+.contact-us .single-detail {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.contact-us .single-detail:last-child {
+  margin-bottom: 0;
+}
+
+.contact-us .single-detail .icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: #F4F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-us .single-detail .icon i {
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-us .single-detail .content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.contact-us .single-detail .content p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  line-height: 24px;
+  margin: 0;
+  word-break: break-word;
+}
+
+.contact-us .single-detail .content p a {
+  color: #888;
+}
+
+.contact-us .single-detail .content p a:hover {
+  color: #473BF0;
+}
+
+.contact-us .form-main {
+  background-color: #F4F7FA;
+  border: 1px dashed #333;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.contact-us .form-group {
+  margin-bottom: 22px;
+}
+
+.contact-us .form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.contact-us .form-group label span {
+  color: #473BF0;
+}
+
+.contact-us .form-group input,
+.contact-us .form-group textarea {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #E7E9EE;
+  border-radius: 5px;
+  padding: 13px 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-us .form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-us .form-group input::placeholder,
+.contact-us .form-group textarea::placeholder {
+  color: #b3b8c2;
+}
+
+.contact-us .form-group input:focus,
+.contact-us .form-group textarea:focus {
+  border-color: #473BF0;
+}
+
+.contact-us .form-group input.has-error,
+.contact-us .form-group textarea.has-error {
+  border-color: #d93025;
+}
+
+/* Honeypot: kept out of sight without display:none, which some bots detect. */
+.contact-us .form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-us .button .btn {
+  cursor: pointer;
+}
+
+.contact-us .button .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none !important;
+}
+
+.contact-us .form-status {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 5px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+}
+
+.contact-us .form-status.is-visible {
+  display: block;
+}
+
+.contact-us .form-status.is-success {
+  background-color: #E8F5EC;
+  color: #1b6e3c;
+}
+
+.contact-us .form-status.is-error {
+  background-color: #FBEAE9;
+  color: #b3261e;
+}
+
+.contact-us .form-note {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+  margin: 16px 0 0;
+}
+
+@media (max-width: 767px) {
+  .contact-us .form-main {
+    padding: 25px 20px;
+  }
 }

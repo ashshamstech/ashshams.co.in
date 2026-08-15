@@ -1,0 +1,18 @@
+# Only contact.php is meant to be requested directly.
+#
+# config.php produces no output on its own, but if PHP were ever
+# misconfigured or disabled the server would fall back to serving the file
+# as plain text and expose its contents. Denying it outright removes that
+# possibility.
+
+<FilesMatch "^config\.php$">
+    # Apache 2.4
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    # Apache 2.2
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
