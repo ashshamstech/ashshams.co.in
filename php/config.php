@@ -30,7 +30,7 @@ return [
      * Where enquiries are delivered. This is the only address the script
      * will ever send to; nothing a visitor types can redirect it.
      */
-    'recipient' => contact_env('CONTACT_RECIPIENT', 'salimshivani@gmail.com'),
+    'recipient' => contact_env('CONTACT_RECIPIENT', 'connect@ashshams.co.in'),
 
     /**
      * The From address on the outgoing mail.
@@ -41,7 +41,7 @@ return [
      * and DMARC. The visitor's address goes in Reply-To instead, so hitting
      * reply in your mail client still answers them directly.
      */
-    'from_email' => contact_env('CONTACT_FROM_EMAIL', 'noreply@ashshams.co.in'),
+    'from_email' => contact_env('CONTACT_FROM_EMAIL', 'connect@ashshams.co.in'),
     'from_name'  => contact_env('CONTACT_FROM_NAME', 'AshShams Technologies Website'),
 
     /** Prefix added to the subject line so enquiries are easy to filter. */
